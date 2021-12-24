@@ -5,8 +5,7 @@
     width: 600px;
     height: 500px;
     justify-content: space-around;
-    align-items: center;
-    
+    align-items: center;   
 }
 .card {
     display: flex;
@@ -21,8 +20,7 @@
     top: 180px;
     backface-visibility: hidden;
     /* -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden; */
-    
+    -moz-backface-visibility: hidden; */   
 }
 .one {
     position: absolute;
@@ -38,7 +36,6 @@
     left: 210px;
     position: absolute
 }
-
 .card-front {
     z-index: 1;
     
@@ -46,8 +43,7 @@
 .card-back {
     transform: rotateY(180deg);
     background-color: whitesmoke;
-}
-     
+}    
 button {
     width: 100px;
     height: 100px;
