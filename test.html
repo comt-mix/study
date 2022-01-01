@@ -4,89 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card game</title>
-    <style>
-        .card-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(192, 240, 198);
-            width: 600px;
-            height: 500px;
-        }
-        .card {
-            display: flex;
-            width: 100px;
-            height: 150px;
-            justify-content: center;
-            align-items: center;     
-            border-radius: 0.8em;   
-            margin: 1em;
-            transition: 1s;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        
-        }
-        .one {
-            position: absolute;
-            left: 70px;
-
-        }
-        .two {
-            position: absolute;
-           
-        }
-        .thr {
-            position: absolute;
-            left: 420px;
-        }
-        .card-front {
-            z-index: 1;
-            background: white;
-        }
-        .card-back {
-            transform: rotateY(180deg);
-            background-color: white
-        }
-        
-        button {
-            width: 100px;
-            height: 100px;
-            background-color: silver;
-        }
-        .card-container:hover .card-front {
-            transform: rotateY(180deg);
-        }
-        .card-container:hover .card-back {
-            transform: rotateY(360deg);
-        }              
-    </style>
+    <title>Pick Up The Card</title>
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <div class="card-container">
-        <div class="card card-front one"></div>
-        <div class="card card-back one">꽝!</div>
-        <div class="card card-front two"></div>
-        <div class="card card-back two">꽝!</div>
-        <div class="card card-front thr"></div>
-        <div class="card card-back thr">당첨!</div>
+    <div class="container">
+        <div class="first">
+            <div class="card card-front one">1</div>
+            <div class="card card-back one">꽝</div>
+        </div>
+        <div class="second">
+            <div class="card card-front two">2</div>
+            <div class="card card-back two">당첨!</div>
+        </div>
+        <div class="third">
+            <div class="card card-front third">3</div>
+            <div class="card card-back third">꽝</div>
+        </div>
     </div>
     <button>시작</button>
-    <script>   
+    <script>         
+       //버튼을 누르면 카드가 회전하기 시작함
        const onButton = () => {
         
        }
        const $button =  document.querySelector('button');
        $button.addEventListener('click', onButton);
        
+       //회전한 후 카드를 선택함
        const onClick = () => {
             console.log('success');
        }
+       
        const $click = document.querySelector('.card');
        $click.addEventListener('click', onClick);
-
-      
-      
     </script>
 </body>
 </html>
